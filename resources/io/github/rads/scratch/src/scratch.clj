@@ -1,5 +1,4 @@
-(ns {{scratch/ns}}
-  "{{description}}")
+(ns {{scratch/ns}})
 
 (defn -main [& args]
   (println args))

@@ -1,4 +1,6 @@
-(ns {{scratch/ns}})
+(ns {{scratch/ns}}
+  (:require [nrepl.cmdline :as nrepl]))
 
-(defn -main [& args]
-  (println args))
+(defn -main [& _]
+  (nrepl/-main)
+  @(future))

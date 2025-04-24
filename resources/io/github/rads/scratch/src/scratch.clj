@@ -3,4 +3,4 @@
 
 (defn -main [& _]
   (nrepl/-main)
-  @(future))
+  @(promise))

@@ -1,4 +1,4 @@
 {:paths ["resources"]
  :deps {}
  :aliases
- {:neil {:project {:version "0.0.3"}}}}
+ {:neil {:project {:version "0.0.4"}}}}

@@ -2,5 +2,4 @@
   (:require [nrepl.cmdline :as nrepl]))
 
 (defn -main [& _]
-  (nrepl/-main)
-  @(promise))
+  (nrepl/-main))

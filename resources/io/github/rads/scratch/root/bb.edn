@@ -1,1 +1,7 @@
-{:tasks {dev (shell "clojure -M -m {{scratch/ns}}")}}
+{:tasks {dev (apply shell "clojure -M:dev" *command-line-args*)
+         test (apply shell "clojure -X:test" *command-line-args*)
+         lint (let [classpath (:out (shell {:out :string} "clojure -Spath"))]
+                (shell "mkdir -p .clj-kondo")
+                (apply shell (format "clj-kondo --lint %s --dependencies --parallel --copy-configs"
+                               classpath)
+                  *command-line-args*))}}

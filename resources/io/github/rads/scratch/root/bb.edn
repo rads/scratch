@@ -1,5 +1,5 @@
-{:tasks {dev (apply shell "clojure -M:dev" *command-line-args*)
-         test (apply shell "clojure -X:test" *command-line-args*)
+{:tasks {dev (apply shell "clojure -M:user:dev" *command-line-args*)
+         test (apply shell "clojure -X:user:test" *command-line-args*)
          lint (let [classpath (:out (shell {:out :string} "clojure -Spath"))]
                 (shell "mkdir -p .clj-kondo")
                 (shell
